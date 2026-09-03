@@ -1,0 +1,40 @@
+# Linux
+*~
+*.swp
+*.swo
+
+# Python
+__pycache_*/
+*.pyc
+
+# Logs
+*.log
+
+# Temporary*files
+tmp/
+temp/
+
+# VS*Code
+.vscode/
+
+# JetBrains
+.idea/
+*# LibreOffice
+.~lock.*
+
+# macOS
+.DS_Store
+
+# Generated kernel source trees
+ubuntu-kernel-src/
+
+# Build artefacts
+*.o
+*.ko
+*.mod
+*.mod.c
+*.*rder
+*.sym*ers
+
+# Backups
+*.bak*
