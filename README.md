@@ -1,18 +1,30 @@
-# Audio Fix MacBookPro14,1 under Linux Mint 24.04
+# MacBookPro14,1 Linux
 
-## Problem
+Linux Mint auf einem MacBook Pro 13" 2017 (MacBookPro14,1).
 
-CS8409 Analog device appears, but:
+## Hardware
 
-- no sound from speakers
-- no sound from headphones
-- speaker-test runs without errors
-- only "Phantom Jack" devices shown
+- Modell: MacBookPro14,1
+- CPU: Intel i5-7360U
+- Audio: Cirrus Logic CS8409
+- WLAN: Broadcom BCM4350
 
-## Root Cause
+## Status
 
-The snd_hda_macbookpro installer fails on Ubuntu/Mint HWE kernels because
-/usr/src/linux-source-7.0.0.tar.bz2 is missing.
+| Komponente | Status |
+|------------|---------|
+| WLAN | ✅ |
+| Audio | ✅ |
+| Tastatur | ✅ |
+| Trackpad | ✅ |
+| Tastaturbeleuchtung | ✅ |
+| Bluetooth | ✅ |
 
-The driver must be built against the exact Ubuntu HWE kernel sources from Launchpad,
-not against a generic kernel.org source tree.
+## Wesentliche Erkenntnis
+
+Für funktionierendes CS8409-Audio unter Ubuntu/Mint HWE-Kernels
+muss `snd_hda_macbookpro` gegen die exakt passenden Ubuntu-HWE-Kernelquellen gebaut werden.
+
+Details siehe:
+
+- docs/audio/cs8409-audio-fix.md
