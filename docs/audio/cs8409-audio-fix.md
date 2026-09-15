@@ -1,25 +1,25 @@
 # CS8409 Audio Fix
 
-## Symptome
+## Symptoms
 
-- CS8409 Analog wird erkannt
-- speaker-test läuft
-- kein Ton
-- Phantom Jack Einträge
+- CS8409 analog is recognized
+- speaker-test operates
+- no sound
+- phantom jack connectors
 
-## Ursache
+## root cause
 
-Falsche oder fehlende Ubuntu HWE Kernelquellen.
+Wrong or missing Ubuntu HWE kernel sources.
 
-## Lösung
+## Soloution
 
-1. Ubuntu HWE Tag ermitteln
-2. sound/hda aus Launchpad Git holen
-3. linux-source-7.0.0.tar.bz2 erzeugen
-4. snd_hda_macbookpro installieren
-5. Neustart
+1. determine Ubuntu HWE tag
+2. grab sound/hda from Launchpad Git
+3. create linux-source-7.0.0.tar.bz2
+4. install snd_hda_macbookpro
+5. Reboot
 
-## Erfolgreich getestet mit
+## Successfully tested with
 
 Kernel:
 7.0.0-31-generic
