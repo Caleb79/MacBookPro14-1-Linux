@@ -20,6 +20,16 @@ Linux Mint with a MacBook Pro 13" 2017 (MacBookPro14,1).
 | Keyboard backlighting | ✅ |
 | Bluetooth | ✅ |
 
+## Suspend and resume
+
+Suspend and resume work after disabling PCIe D3cold for the Apple NVMe
+controller at `0000:01:00.0`.
+
+See:
+
+- docs/hardware/suspend-resume.md
+- systemd/apple-nvme-d3cold.service
+
 ## Wesentliche Erkenntnis
 
 For CS8409 audio to work properly on Ubuntu/Mint HWE kernels,
