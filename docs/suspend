@@ -1,0 +1,37 @@
+## Suspend / Resume Fix
+
+### Symptoms
+
+- Resume takes a long time
+- WiFi disappears after resume
+- Audio stops working
+- Applications report I/O errors
+- System eventually freezes or shows a black screen
+
+Example:
+
+```text
+bash: /usr/bin/top: Input/output error
+
+Root Cause
+
+The Apple NVMe SSD (PCI device 0000:01:00.0) enters PCIe D3cold during suspend and does not reliably recover during resume.
+
+Workaround
+
+Disable D3cold:
+echo 0 | sudo tee /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed
+
+Result
+
+✅ Deep Sleep works
+
+✅ Resume works
+
+✅ WiFi works
+
+✅ Audio works
+
+✅ No I/O errors
+
+✅ Stable system after resume
