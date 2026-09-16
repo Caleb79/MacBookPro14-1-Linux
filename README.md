@@ -19,6 +19,7 @@ Linux Mint with a MacBook Pro 13" 2017 (MacBookPro14,1).
 | Trackpad | ✅ |
 | Keyboard backlighting | ✅ |
 | Bluetooth | ✅ |
+| Suspend modus | ✅ |
 
 ## Suspend and resume
 
