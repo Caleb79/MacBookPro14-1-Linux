@@ -1,0 +1,12 @@
+[Unit]
+Description=Disable D3cold for Apple NVMe SSD
+After=sys-fs-sysfs.mount
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'test -e /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed && echo 0 > /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
