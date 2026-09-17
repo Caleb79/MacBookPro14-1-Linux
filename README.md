@@ -31,7 +31,7 @@ See:
 - docs/hardware/suspend-resume.md
 - systemd/apple-nvme-d3cold.service
 
-## Wesentliche Erkenntnis
+## Key findings
 
 For CS8409 audio to work properly on Ubuntu/Mint HWE kernels,
 `snd_hda_macbookpro` must be built against the exact matching Ubuntu HWE kernel sources.
